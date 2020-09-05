@@ -12,5 +12,5 @@ services:
     environment:
       - DISPLAY=${DISPLAY}
     volumes:
-      - ${HOME}/workspace/latex:/media/docker/latex
+      - ${HOME}/workspace/latex:/home/ubuntu/latex
       - /tmp/.X11-unix:/tmp/.X11-unix:rw # x server

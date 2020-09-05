@@ -24,7 +24,7 @@ RUN echo 'root:root' | chpasswd
 RUN useradd -ms /bin/bash ubuntu
 
 # Run lat
-RUN mkdir -p /media/docker/latex
 USER ubuntu
-WORKDIR /media/docker/latex
+RUN mkdir -p /home/ubuntu/latex
+WORKDIR /home/ubuntu/latex
 CMD texmaker
