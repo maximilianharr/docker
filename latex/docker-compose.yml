@@ -1,0 +1,16 @@
+version: '3'
+services:
+  latex:
+    image: maximilianharr/latex
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    user: ubuntu
+    read_only: false
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - ${HOME}/workspace/latex:/media/docker/latex
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw # x server
