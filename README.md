@@ -1,6 +1,6 @@
 # Docker Collection
 
-This is a collection of docker containers that we found useful over time.
+This is a collection of docker containers that we found useful. 
 
 ## Getting Started
 All you need to have is docker and docker-compose. 
@@ -23,5 +23,9 @@ docker exec -it ${FOLDER}_${FOLDER}_1 bash
 
 ### Latex
 Runs texmaker GUI on host with full latex distribution.  
-By default ${HOME}/workspace/latex is mounted to /media/docker/latex.  
+By default ~/workspace/latex is mounted to the home folder of the container (see docker-compose.yml).  
 ![Latex](doc/latex.png)  
+
+## License
+
+[Apache License 2.0](LICENSE)
