@@ -1,0 +1,12 @@
+version: '3'
+services:
+  ros2:
+    image: maximilianharr/ros2
+    build: .
+    ports:
+    - "11311:11311"
+    volumes:
+    - ${HOME}/workspace/:/home/ubuntu/workspace
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    user: ubuntu
