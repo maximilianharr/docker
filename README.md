@@ -26,6 +26,15 @@ Runs texmaker GUI on host with full latex distribution.
 By default ~/workspace/latex is mounted to the home folder of the container (see docker-compose.yml).  
 ![Latex](doc/latex.png)  
 
+### ROS
+Runs Robot Operating System (ROS) with graphical support.
+
+### ROS2
+Runs Robot Operating System 2 (ROS2) with graphical support.
+
+### Tensorflow with Nvidia GPU support
+Installs docker image with tensorflow and Nvidia GPU support. 
+
 ## License
 
 [Apache License 2.0](LICENSE)

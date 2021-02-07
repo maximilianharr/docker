@@ -2,11 +2,21 @@ version: '3'
 services:
   ros2:
     image: maximilianharr/ros2
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile
     ports:
-    - "11311:11311"
+    - 11311:11311
     volumes:
     - ${HOME}/workspace/:/home/ubuntu/workspace
+    - /tmp/.X11-unix:/tmp/.X11-unix:rw # x server
     stdin_open: true # docker run -i
     tty: true        # docker run -t
     user: ubuntu
+    read_only: false
+    network_mode: "host"
+    environment:
+      - DISPLAY=${DISPLAY}
+    privileged: true
+
+    

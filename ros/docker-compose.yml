@@ -10,3 +10,9 @@ services:
     user: ubuntu
     volumes:
     - ${HOME}/workspace/:/home/ubuntu/workspace
+    - /tmp/.X11-unix:/tmp/.X11-unix:rw # x server
+    read_only: false
+    network_mode: "host"
+    environment:
+      - DISPLAY=${DISPLAY}
+    privileged: true
